@@ -1,9 +1,9 @@
-<?php require '../classes/header.php'; ?>
+<?php require './assets/php/classes/header.php'; ?>
 <div class="container">
     <h1>Cadastre-se</h1>
 <?php 
 
-    require '../classes/usuarios.php';
+    require './assets/php/classes/usuarios.php';
 
     $u = new Usuarios();
 
@@ -64,4 +64,4 @@
 
 </div>
 
-<?php require '../classes/footer.php'; ?>
+<?php require './assets/php/classes/footer.php'; ?>

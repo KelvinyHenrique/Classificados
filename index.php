@@ -1,11 +1,12 @@
-    
     <?php require './assets/php/classes/header.php'; ?>
+    
     <div class="container-fluid">
         <div class="jumbotron">
             <h2>Nos temos hoje 99 anúncios</h2>
             <p>E mais de 9999 usúarios cadastrados</p>
         </div>
 
+      
         <div class="row">
             <div class="col-sm-3">
                 <h4>Pesquisa Avançada</h4>

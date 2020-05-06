@@ -1,9 +1,9 @@
-<?php require '../classes/header.php'; ?>
+<?php require './assets/php/classes/header.php'; ?>
 <div class="container">
     <h1>Login</h1>
 <?php 
 
-    require '../classes/usuarios.php';
+    require './assets/php/classes/usuarios.php';
 
     $u = new Usuarios();
 
@@ -12,7 +12,7 @@
         $senha = $_POST['senha'];
         if($u->login($email, $senha)) {
             ?>
-            <script type="text/javascript">window.location.href="../../../index.php";</script>
+            <script type="text/javascript">window.location.href="./index.php";</script>
             <?php
         } else {
             ?>
@@ -41,4 +41,4 @@
 
 </div>
 
-<?php require '../classes/footer.php'; ?>
+<?php require './assets/php/classes/footer.php'; ?>

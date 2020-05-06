@@ -23,11 +23,18 @@
                
             <?php
                 if (isset($_SESSION['cLogin']) && !empty($_SESSION['cLogin'])): ?>
-                <li><a href="./assets/php/pages/meus-anuncios.php">Meus anuncios</a></li>
-                <li><a href="./assets/php/pages/sair.php">Sair</a></li>
+                <?php 
+                require './assets/php/classes/usuarios.php';
+                $id = $_SESSION['cLogin'];
+                $u = new Usuarios();
+                $nome = $u->getNome($id);
+                echo "<li class='welcome'> ".$nome['nome']." </li>";
+                ?>
+                <li><a href="./meus-anuncios.php">Meus anuncios</a></li>
+                <li><a href="./sair.php">Sair</a></li>
                 <?php else: ?>
-                <li><a href="./assets/php/pages/cadastrar.php">Cadastre-se</a></li>
-                <li><a href="./assets/php/pages/login.php">Login</a></li>
+                <li><a href="./cadastrar.php">Cadastre-se</a></li>
+                <li><a href="./login.php">Login</a></li>
                 <?php endif; ?>
             </ul>
         </div>
